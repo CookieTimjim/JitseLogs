@@ -19,7 +19,7 @@ public class Sleep implements Listener {
         if (world.getTime() > 13050 && world.getTime() < 23050) {
             event.setCancelled(true);
 
-            world.setTime(23050);
+            world.setTime(24000);
             world.setThundering(false);
             world.setStorm(false);
 

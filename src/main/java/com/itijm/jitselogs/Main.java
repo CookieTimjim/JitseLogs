@@ -1,5 +1,6 @@
 package com.itijm.jitselogs;
 
+import com.itijm.jitselogs.Commands.Bump;
 import com.itijm.jitselogs.Handlers.Chat;
 import com.itijm.jitselogs.Handlers.Join;
 import com.itijm.jitselogs.Handlers.Sleep;
@@ -13,6 +14,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Join(), this);
         getServer().getPluginManager().registerEvents(new Chat(), this);
         getServer().getPluginManager().registerEvents(new Sleep(), this);
+        this.getCommand("bump").setExecutor(new Bump());
         DiscordWebhook.embed(0xE3D4D3, "Server startup", false);
     }
 

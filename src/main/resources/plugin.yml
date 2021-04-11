@@ -2,3 +2,7 @@ name: Jitselogs
 version: ${project.version}
 main: com.itijm.jitselogs.Main
 api-version: 1.16
+commands:
+  bump:
+    description: Gives someone a little bump
+    usage: /bump <username>
