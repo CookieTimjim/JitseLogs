@@ -9,6 +9,9 @@ public class Chat implements Listener {
 
     @EventHandler
     public static void onChat(AsyncPlayerChatEvent event) {
-        DiscordWebhook.message(event.getMessage(), event.getPlayer().getName());
+        new DiscordWebhook.MessageBuilder()
+            .setMessage(event.getMessage())
+            .setName(event.getPlayer().getName())
+            .send();
     }
 }
