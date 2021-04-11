@@ -1,0 +1,4 @@
+name: Jitselogs
+version: ${project.version}
+main: com.itijm.jitselogs.Main
+api-version: 1.16
