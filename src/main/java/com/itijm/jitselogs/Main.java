@@ -15,11 +15,17 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Chat(), this);
         getServer().getPluginManager().registerEvents(new Sleep(), this);
         this.getCommand("bump").setExecutor(new Bump());
-        DiscordWebhook.embed(0xE3D4D3, "Server startup", false);
+        new DiscordWebhook.EmbedBuilder()
+            .setColor(0xE3D4D3)
+            .setMessage("Server startup")
+            .send();
     }
 
     @Override
     public void onDisable() {
-        DiscordWebhook.embed(0xE3D4D3, "Server shutdown", true);
+        new DiscordWebhook.EmbedBuilder()
+                .setColor(0xE3D4D3)
+                .setMessage("Server shutdown")
+                .send();
     }
 }
