@@ -81,7 +81,7 @@ public class DiscordWebhook {
             WebhookMessage webhookMessage = new WebhookMessageBuilder()
                     .setUsername(name)
                     .setContent(message)
-                    .setAvatarUrl("https://minotar.net/helm/" + name + "/100.png")
+                    .setAvatarUrl("https://mc-heads.net/head/" + name + "/100.png")
                     .build();
 
             client.send(webhookMessage).whenComplete((v, e) -> {
