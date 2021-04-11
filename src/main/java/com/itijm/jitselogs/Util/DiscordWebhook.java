@@ -37,7 +37,7 @@ public class DiscordWebhook {
         WebhookMessageBuilder builder = new WebhookMessageBuilder();
         builder.setUsername(name);
         builder.setContent(message);
-        builder.setAvatarUrl("https://minotar.net/helm/" + name + "/100.png");
+        builder.setAvatarUrl("https://mc-heads.net/head/" + name + "/100.png");
 
         client.send(builder.build()).whenComplete((v, e) -> {
             if (e != null && e.getMessage().contains("Request returned failure 404")) {
