@@ -14,10 +14,10 @@ public class Join implements Listener {
 
         if (player.hasPlayedBefore()) {
             String message = player.getName() + " joined on " + player.getAddress().toString().replace("/", "").split(":")[0];
-            DiscordWebhook.send(0xed1a28, message, false);
+            DiscordWebhook.embed(0xE3D4D3, message, false);
         } else {
             String message = "**NEW JOIN:** " + player.getName() + " joined on " + player.getAddress().toString().replace("/", "").split(":")[0];
-            DiscordWebhook.send(0xed1a28, message, true);
+            DiscordWebhook.embed(0xE3D4D3, message, true);
         }
     }
 
